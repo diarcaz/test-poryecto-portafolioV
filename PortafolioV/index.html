@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Portafolio profesional de Ingeniero Mecánico - Diseño, análisis y manufactura de componentes industriales y automotrices">
+  <meta name="keywords" content="ingeniero mecánico, CAD, SolidWorks, diseño mecánico, análisis FEA, manufactura">
+  <meta name="author" content="Ingeniero Mecánico">
+
+  <title>Portafolio - Ingeniero Mecánico | Diseño y Manufactura</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚙️</text></svg>">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+
+  <!-- PDF.js Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+</head>
+
+<body>
+  <!-- ========== HEADER / NAVEGACIÓN ========== -->
+  <header class="header" id="header">
+    <div class="container">
+      <div class="flex items-center justify-between" style="height: 100%;">
+        <!-- Logo -->
+        <a href="#hero" class="flex items-center gap-3">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="20" cy="20" r="18" stroke="url(#gradient)" stroke-width="3" fill="none" />
+            <circle cx="20" cy="20" r="6" fill="url(#gradient)" />
+            <line x1="20" y1="8" x2="20" y2="14" stroke="url(#gradient)" stroke-width="2" />
+            <line x1="20" y1="26" x2="20" y2="32" stroke="url(#gradient)" stroke-width="2" />
+            <line x1="8" y1="20" x2="14" y2="20" stroke="url(#gradient)" stroke-width="2" />
+            <line x1="26" y1="20" x2="32" y2="20" stroke="url(#gradient)" stroke-width="2" />
+            <defs>
+              <linearGradient id="gradient" x1="0" y1="0" x2="40" y2="40">
+                <stop offset="0%" style="stop-color:#2d5f8d;stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#ff6f00;stop-opacity:1" />
+              </linearGradient>
+            </defs>
+          </svg>
+          <span class="font-bold" style="font-size: var(--text-xl); color: var(--text-primary);">
+            Ingeniero Mecánico
+          </span>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="nav" id="nav">
+          <a href="#about" class="nav-link">Sobre Mí</a>
+          <a href="#experience" class="nav-link">Experiencia</a>
+          <a href="#skills" class="nav-link">Habilidades</a>
+          <a href="#projects" class="nav-link">Proyectos</a>
+          <a href="#certifications" class="nav-link">Certificaciones</a>
+          <a href="#contact" class="nav-link">Contacto</a>
+        </nav>
+
+        <!-- Theme Toggle & Mobile Menu -->
+        <div class="flex items-center gap-2">
+          <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              id="iconLight">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              id="iconDark" style="display: none;">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </button>
+
+          <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menú">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========== MAIN CONTENT ========== -->
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="gradient-animated" style="padding: 120px 0; position: relative; overflow: hidden;">
+      <div class="container">
+        <div class="flex flex-col items-center text-center" style="position: relative; z-index: 2;">
+          <!-- Profile Image -->
+          <div class="reveal" style="margin-bottom: var(--space-8); position: relative;">
+            <div
+              style="width: 180px; height: 180px; border-radius: 50%; border: 6px solid rgba(255,255,255,0.3); padding: 8px; background: rgba(255,255,255,0.1); backdrop-filter: blur(10px);">
+              <div id="profilePhoto"
+                style="width: 100%; height: 100%; border-radius: 50%; background: linear-gradient(135deg, #f5f5f5, #d4d4d4); display: flex; align-items: center; justify-content: center; font-size: 64px; color: #666;">
+                👤
+              </div>
+            </div>
+          </div>
+
+          <h1 class="reveal reveal-delay-1"
+            style="font-size: var(--text-6xl); color: white; margin-bottom: var(--space-4); font-weight: var(--font-bold);">
+            Ingeniero Mecánico
+          </h1>
+
+          <p class="reveal reveal-delay-2"
+            style="font-size: var(--text-2xl); color: rgba(255,255,255,0.9); margin-bottom: var(--space-3); font-weight: var(--font-medium);">
+            Diseño, Análisis y Manufactura
+          </p>
+
+          <p class="reveal reveal-delay-3"
+            style="font-size: var(--text-lg); color: rgba(255,255,255,0.8); max-width: 700px; margin-bottom: var(--space-8);">
+            Especialista en diseño CAD, análisis FEA/CFD y desarrollo de proyectos de ingeniería mecánica con más de 6
+            años de experiencia en la industria automotriz y manufacturera.
+          </p>
+
+          <div class="flex gap-4 reveal reveal-delay-4">
+            <a href="#projects" class="btn btn-accent btn-lg">
+              Ver Proyectos
+            </a>
+            <a href="#contact" class="btn btn-outline btn-lg"
+              style="background: rgba(255,255,255,0.1); color: white; border-color: rgba(255,255,255,0.4); backdrop-filter: blur(10px);">
+              Contactar
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Decorative Elements -->
+      <div style="position: absolute; top: 10%; right: 10%; opacity: 0.1;">
+        <svg width="200" height="200" viewBox="0 0 200 200">
+          <circle cx="100" cy="100" r="80" stroke="white" stroke-width="2" fill="none" />
+          <circle cx="100" cy="100" r="20" fill="white" />
+        </svg>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="bg-primary">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Sobre Mí</h2>
+          <p class="section-subtitle">
+            Ingeniero Mecánico apasionado por la innovación y la excelencia técnica
+          </p>
+        </div>
+
+        <div class="grid grid-cols-2 gap-8" style="align-items: center;">
+          <div class="reveal">
+            <h3 class="font-semibold mb-4" style="font-size: var(--text-2xl); color: var(--color-primary-600);">
+              ¡Hola! Soy un Ingeniero Mecánico
+            </h3>
+            <p class="mb-4" style="color: var(--text-secondary); line-height: var(--leading-relaxed);">
+              Con más de <strong>6 años de experiencia</strong> en la industria automotriz y manufacturera, me
+              especializo en el diseño de componentes mecánicos, análisis estructural y térmico, y desarrollo de
+              herramentales para procesos de manufactura.
+            </p>
+            <p class="mb-4" style="color: var(--text-secondary); line-height: var(--leading-relaxed);">
+              Mi enfoque combina <strong>creatividad en el diseño</strong>, <strong>rigor en el análisis</strong> y
+              <strong>pragmatismo en la manufactura</strong>, siempre buscando soluciones que optimicen costos sin
+              comprometer la calidad técnica.
+            </p>
+            <p class="mb-6" style="color: var(--text-secondary); line-height: var(--leading-relaxed);">
+              Cuento con certificaciones profesionales en <strong>SOLIDWORKS</strong>, <strong>Six Sigma Green
+                Belt</strong> y <strong>AutoCAD</strong>, y experiencia práctica con diversas herramientas de simulación
+              y análisis.
+            </p>
+
+            <!-- Quick Stats -->
+            <div class="grid grid-cols-3 gap-4 mt-8">
+              <div class="card text-center" style="padding: var(--space-4);">
+                <div
+                  style="font-size: var(--text-4xl); font-weight: var(--font-bold); color: var(--color-primary-600);">6+
+                </div>
+                <div style="font-size: var(--text-sm); color: var(--text-secondary); margin-top: var(--space-2);">Años
+                  de Experiencia</div>
+              </div>
+              <div class="card text-center" style="padding: var(--space-4);">
+                <div style="font-size: var(--text-4xl); font-weight: var(--font-bold); color: var(--color-accent-600);">
+                  50+</div>
+                <div style="font-size: var(--text-sm); color: var(--text-secondary); margin-top: var(--space-2);">
+                  Proyectos Completados</div>
+              </div>
+              <div class="card text-center" style="padding: var(--space-4);">
+                <div
+                  style="font-size: var(--text-4xl); font-weight: var(--font-bold); color: var(--color-primary-600);">4
+                </div>
+                <div style="font-size: var(--text-sm); color: var(--text-secondary); margin-top: var(--space-2);">
+                  Certificaciones</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="reveal reveal-delay-2">
+            <div id="aboutImage"
+              style="width: 100%; aspect-ratio: 1; border-radius: var(--radius-xl); background: linear-gradient(135deg, var(--color-primary-100), var(--color-accent-100)); display: flex; align-items: center; justify-content: center; font-size: 120px; box-shadow: var(--shadow-xl);">
+              ⚙️
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="bg-secondary">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Trayectoria Profesional</h2>
+          <p class="section-subtitle">
+            Experiencia laboral y formación académica
+          </p>
+        </div>
+
+        <div class="timeline" id="timeline">
+          <!-- Timeline will be populated by JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="bg-primary">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Habilidades Técnicas</h2>
+          <p class="section-subtitle">
+            Herramientas y tecnologías que domino
+          </p>
+        </div>
+
+        <div class="grid grid-cols-2" id="skillsContainer">
+          <!-- Skills will be populated by JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="bg-secondary">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Portafolio de Proyectos</h2>
+          <p class="section-subtitle">
+            Selección de proyectos destacados de ingeniería mecánica
+          </p>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="flex justify-center mb-6">
+          <div style="position: relative; max-width: 600px; width: 100%;">
+            <input type="text" id="projectSearch"
+              placeholder="Buscar proyectos por título, descripción, herramientas o tags..."
+              style="width: 100%; padding: var(--space-3) var(--space-12) var(--space-3) var(--space-4); border: 2px solid var(--border-color); border-radius: var(--radius-lg); background: var(--bg-elevated); color: var(--text-primary); font-family: var(--font-primary); font-size: var(--text-base); transition: border-color var(--transition-fast);"
+              aria-label="Buscar proyectos">
+            <div
+              style="position: absolute; right: var(--space-4); top: 50%; transform: translateY(-50%); color: var(--text-tertiary); pointer-events: none; font-size: var(--text-xl);">
+              🔍
+            </div>
+            <button id="clearSearch"
+              style="position: absolute; right: var(--space-12); top: 50%; transform: translateY(-50%); background: none; border: none; color: var(--text-secondary); cursor: pointer; font-size: var(--text-xl); padding: var(--space-2); display: none; opacity: 0.6; transition: opacity var(--transition-fast);"
+              aria-label="Limpiar búsqueda" title="Limpiar búsqueda">
+              ✕
+            </button>
+          </div>
+        </div>
+
+        <!-- Search Results Counter -->
+        <div id="searchResults"
+          style="text-align: center; margin-bottom: var(--space-4); color: var(--text-secondary); font-size: var(--text-sm); display: none;">
+        </div>
+
+        <!-- Filters -->
+        <div class="flex justify-center gap-3 mb-12 flex-wrap" id="projectFilters">
+          <button class="btn btn-sm btn-primary filter-btn active" data-filter="all">
+            Todos
+          </button>
+          <button class="btn btn-sm btn-outline filter-btn" data-filter="design">
+            Diseño CAD
+          </button>
+          <button class="btn btn-sm btn-outline filter-btn" data-filter="analysis">
+            Análisis FEA/CFD
+          </button>
+          <button class="btn btn-sm btn-outline filter-btn" data-filter="manufacturing">
+            Manufactura
+          </button>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="grid grid-cols-3" id="projectsGrid">
+          <!-- Projects will be populated by JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="bg-primary">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Certificaciones</h2>
+          <p class="section-subtitle">
+            Credenciales profesionales y formación continua
+          </p>
+        </div>
+
+        <div class="grid grid-cols-2" id="certificationsContainer">
+          <!-- Certifications will be populated by JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-secondary">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Contacto</h2>
+          <p class="section-subtitle">
+            ¿Tienes un proyecto en mente? ¡Hablemos!
+          </p>
+        </div>
+
+        <div class="grid grid-cols-2 gap-8">
+          <!-- Contact Form -->
+          <div class="reveal">
+            <div class="card">
+              <form id="contactForm">
+                <div class="mb-4">
+                  <label for="name"
+                    style="display: block; margin-bottom: var(--space-2); font-weight: var(--font-medium); color: var(--text-primary);">
+                    Nombre
+                  </label>
+                  <input type="text" id="name" name="name" required
+                    style="width: 100%; padding: var(--space-3); border: 1px solid var(--border-color); border-radius: var(--radius-md); background: var(--bg-primary); color: var(--text-primary); font-family: var(--font-primary);">
+                </div>
+
+                <div class="mb-4">
+                  <label for="email"
+                    style="display: block; margin-bottom: var(--space-2); font-weight: var(--font-medium); color: var(--text-primary);">
+                    Correo Electrónico
+                  </label>
+                  <input type="email" id="email" name="email" required
+                    style="width: 100%; padding: var(--space-3); border: 1px solid var(--border-color); border-radius: var(--radius-md); background: var(--bg-primary); color: var(--text-primary); font-family: var(--font-primary);">
+                </div>
+
+                <div class="mb-4">
+                  <label for="message"
+                    style="display: block; margin-bottom: var(--space-2); font-weight: var(--font-medium); color: var(--text-primary);">
+                    Mensaje
+                  </label>
+                  <textarea id="message" name="message" rows="5" required
+                    style="width: 100%; padding: var(--space-3); border: 1px solid var(--border-color); border-radius: var(--radius-md); background: var(--bg-primary); color: var(--text-primary); font-family: var(--font-primary); resize: vertical;"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
+                  Enviar Mensaje
+                </button>
+              </form>
+            </div>
+          </div>
+
+          <!-- Contact Info -->
+          <div class="reveal reveal-delay-2">
+            <div class="card mb-6">
+              <h3 class="card-title">Información de Contacto</h3>
+              <div class="flex flex-col gap-4 mt-4">
+                <div class="flex items-center gap-3">
+                  <div
+                    style="width: 40px; height: 40px; background: var(--color-primary-100); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; color: var(--color-primary-600);">
+                    📧
+                  </div>
+                  <div>
+                    <div style="font-size: var(--text-sm); color: var(--text-secondary);">Email</div>
+                    <div style="font-weight: var(--font-medium); color: var(--text-primary);">ingeniero@ejemplo.com
+                    </div>
+                  </div>
+                </div>
+
+                <div class="flex items-center gap-3">
+                  <div
+                    style="width: 40px; height: 40px; background: var(--color-primary-100); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; color: var(--color-primary-600);">
+                    📱
+                  </div>
+                  <div>
+                    <div style="font-size: var(--text-sm); color: var(--text-secondary);">Teléfono</div>
+                    <div style="font-weight: var(--font-medium); color: var(--text-primary);">+52 (81) 1234-5678</div>
+                  </div>
+                </div>
+
+                <div class="flex items-center gap-3">
+                  <div
+                    style="width: 40px; height: 40px; background: var(--color-primary-100); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; color: var(--color-primary-600);">
+                    📍
+                  </div>
+                  <div>
+                    <div style="font-size: var(--text-sm); color: var(--text-secondary);">Ubicación</div>
+                    <div style="font-weight: var(--font-medium); color: var(--text-primary);">Monterrey, Nuevo León,
+                      México</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Social Links -->
+            <div class="card">
+              <h3 class="card-title">Redes Profesionales</h3>
+              <div class="flex gap-3 mt-4">
+                <a href="https://linkedin.com" target="_blank" class="btn btn-outline" style="flex: 1;">
+                  LinkedIn
+                </a>
+                <a href="#" class="btn btn-outline" style="flex: 1;">
+                  Descargar CV
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer
+    style="background: var(--bg-secondary); border-top: 1px solid var(--border-color); padding: var(--space-12) 0 var(--space-6) 0;">
+    <div class="container">
+      <div class="text-center">
+        <p style="color: var(--text-secondary); margin-bottom: var(--space-2);">
+          © 2024 Portafolio Profesional de Ingeniero Mecánico
+        </p>
+        <p style="color: var(--text-tertiary); font-size: var(--text-sm);">
+          Diseñado y desarrollado con dedicación
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Project Modal -->
+  <div class="modal-backdrop" id="projectModal">
+    <div class="modal">
+      <div class="modal-header">
+        <h3 class="modal-title" id="modalTitle">Título del Proyecto</h3>
+        <button class="modal-close" id="modalClose">&times;</button>
+      </div>
+      <div class="modal-body" id="modalBody">
+        <!-- Modal content will be populated by JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- PDF Viewer Modal -->
+  <div class="modal-backdrop" id="pdfViewerModal">
+    <div class="modal" style="max-width: 1200px; height: 90vh; display: flex; flex-direction: column;">
+      <div class="modal-header">
+        <h3 class="modal-title" id="pdfModalTitle">Documento PDF</h3>
+        <button class="modal-close" id="pdfModalClose">&times;</button>
+      </div>
+
+      <!-- PDF Controls -->
+      <div
+        style="padding: var(--space-4); background: var(--bg-secondary); border-bottom: 1px solid var(--border-color); display: flex; align-items: center; justify-content: space-between; gap: var(--space-4); flex-wrap: wrap;">
+        <!-- Page Navigation -->
+        <div style="display: flex; align-items: center; gap: var(--space-2);">
+          <button class="btn btn-sm btn-outline" id="pdfPrevPage" title="Página anterior">
+            ← Anterior
+          </button>
+          <span id="pdfPageInfo" style="color: var(--text-secondary); font-size: var(--text-sm); white-space: nowrap;">
+            Página <span id="pdfCurrentPage">1</span> de <span id="pdfTotalPages">1</span>
+          </span>
+          <button class="btn btn-sm btn-outline" id="pdfNextPage" title="Página siguiente">
+            Siguiente →
+          </button>
+        </div>
+
+        <!-- Zoom Controls -->
+        <div style="display: flex; align-items: center; gap: var(--space-2);">
+          <button class="btn btn-sm btn-outline" id="pdfZoomOut" title="Alejar">
+            🔍−
+          </button>
+          <span id="pdfZoomLevel"
+            style="color: var(--text-secondary); font-size: var(--text-sm); min-width: 60px; text-align: center;">
+            100%
+          </span>
+          <button class="btn btn-sm btn-outline" id="pdfZoomIn" title="Acercar">
+            🔍+
+          </button>
+          <button class="btn btn-sm btn-outline" id="pdfZoomFit" title="Ajustar a pantalla">
+            Ajustar
+          </button>
+        </div>
+
+        <!-- Download Button -->
+        <a class="btn btn-sm btn-primary" id="pdfDownloadBtn" download style="text-decoration: none;">
+          📥 Descargar
+        </a>
+      </div>
+
+      <!-- PDF Canvas Container -->
+      <div class="modal-body" id="pdfCanvasContainer"
+        style="flex: 1; overflow: auto; display: flex; align-items: center; justify-content: center; background: var(--color-neutral-700);">
+        <canvas id="pdfCanvas" style="display: block; max-width: 100%; box-shadow: var(--shadow-xl);"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+  <script src="js/projects.js"></script>
+  <script src="js/filters.js"></script>
+  <script src="js/theme-switcher.js"></script>
+  <script src="js/pdf-viewer.js"></script>
+  <script src="js/search.js"></script>
+</body>
+
+</html>
